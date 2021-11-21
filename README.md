@@ -8,4 +8,5 @@ Es wurde lediglich versucht den Pseudocode, welcher im Unterricht aufgearbeitet 
 Meisens ist der Pseudocode nicht zu finden, da mir diese Idee erst am 21. 11. 2021 aufgekommen ist.
 
 - Alexandru Schneider
+ 
 Datum: 21. 11. 2021

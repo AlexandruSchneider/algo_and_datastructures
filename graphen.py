@@ -63,6 +63,7 @@ def BFS(V, E, start):
         u = Q.pop(0)
         for j in V:
             if (u, j) in E and not istBekannt[j-1]:
+                # Da die Liste mit None werten gefüllt wird, kann es sein, dass ich einen NoneValue Error erhalte
                 abstand[j-1] = abstand[u-1]+1 if abstand[u-1] is not None else None
                 vorgaenger[j-1] = u
                 istBekannt[j-1] = True
@@ -87,6 +88,7 @@ def BFS_Index_Based(V, E, start):
         u = Q.pop(0)
         for j in range(len(V)):
             if (u, V[j]) in E and not istBekannt[j]:
+                # Da die Liste mit None werten gefüllt wird, kann es sein, dass ich einen NoneValue Error erhalte
                 abstand[j] =  abstand[V.index(u)]+1 if abstand[V.index(u)] is not None else None
                 vorgaenger[j] = u
                 istBekannt[j] = True
@@ -109,6 +111,7 @@ def DFS(V, E, start):
         u = Q.pop()
         for v in V:
             if (u, v) in E and not istBekannt[v-1]:
+                # Da die Liste mit None werten gefüllt wird, kann es sein, dass ich einen NoneValue Error erhalte
                 abstand[v-1] = abstand[u-1]+1 if abstand[u-1] is not None else None
                 vorgaenger[v-1] = u
                 istBekannt[v-1] = True
@@ -133,6 +136,7 @@ def DFS_Index_Based(V, E, start):
         u = Stack.pop(0)
         for j in range(len(V)):
             if (u, V[j]) in E and not istBekannt[j]:
+                # Da die Liste mit None werten gefüllt wird, kann es sein, dass ich einen NoneValue Error erhalte
                 abstand[j] = abstand[V.index(u)]+1 if abstand[V.index(u)] is not None else None
                 vorgaenger[j] = u
                 istBekannt[j] = True

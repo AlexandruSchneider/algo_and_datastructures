@@ -76,12 +76,12 @@ Rückgabe nichts bzw.  Gibt den Suchbaum in korrekter Reihenfolge auf die Konsol
 4.     while ¬fertig do:
 5.         if wurzel != null then:
 6.             stack.Einfügen(aktuell)
-7.             wurzel <-- wurzel.links
+7.             wurzel --> wurzel.links
 8.         else:
 9.             if stack.länge > 0 then:
-10.                wurzel <-- stack.pop()
+10.                wurzel --> stack.pop()
 11.                drucke "[" + wurzel.daten + "]"
-12.                wurzel <-- wurzel.rechts
+12.                wurzel --> wurzel.rechts
 13.            else: 
 14.                fertig <-- True
 15.else:

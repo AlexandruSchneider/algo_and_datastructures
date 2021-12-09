@@ -39,6 +39,7 @@ def main():
          [8, 11, 0, 0, 0, 0, 1, 0, 7],
          [0, 0, 2, 0, 0, 0, 6, 7, 0]]
     adjList = convertMatrixToList(a)
+    print(adjList)
     printAdjazenzListe(adjList)
     vertices = convertListeZuKantenVonTripel(adjList)
     print(vertices)

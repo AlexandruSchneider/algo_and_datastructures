@@ -2,14 +2,16 @@ def dijkstra(V, E, start):
     abstand = [float("inf")] * len(V)
     vorgaenger = [None] * len(V)
     istFertig = [False] * len(V)
+
     abstand[V.index(start)] = 0
+
     while Knoten_vorhanden_Dijkstra(V, istFertig, abstand):
         naechster = Naechster_Knoten_Dijkstra(V, istFertig, abstand)
         istFertig[V.index(naechster)] = True
         # bis dahin ist alles wie im Pseudocode
         # ab hier gibt es eine Änderung, da es Tripel sind
         for kante in E:
-            # überprüfen ob der nächst wert auch die aktuelle kante hat
+            # überprüfen ob der nächste wert auch die aktuelle kante hat
             if naechster == kante[0]:
                 # die kante holen
                 v = kante[1]

@@ -1,8 +1,9 @@
 def dijkstra_adjazenz_matrix(V, adjazenz, start):
     abstand = [float("inf")] * V
     vorgaenger = [None] * V
-    abstand[start] = 0
     istFertig = [False] * V
+
+    abstand[start] = 0
 
     for i in range(V):
         u = Naechster_Knoten_Dijkstra(V, istFertig, abstand)

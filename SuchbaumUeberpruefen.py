@@ -90,8 +90,8 @@ Bezüglich suchbaum_to_list_in_order(wurzel):
 
 Gleicher Code wie bei der Funktion printInOrderIter(wurzel) mit 3 Änderungen:
 
-Änderung: Eine Liste namens "liste" erstellen. 1 Zeile oberhalb von stack (Zeile 2 im Pseudocode der Aufgabe 4)
-Änderung: Zeile 11 geändert: anstatt Werte auszudrucken, der neu erstellten Liste hinzufügen --> liste.append(wurzel)
+Änderung: Eine Liste namens "feld" erstellen. 1 Zeile oberhalb von stack (Zeile 2 im Pseudocode der Aufgabe 4)
+Änderung: Zeile 11 geändert: anstatt Werte auszudrucken, der neu erstellten Liste hinzufügen --> feld.append(wurzel)
 Änderung: Zeilen 15 & 16 & 17 durch "return liste" ersetzt, damit die "in order" Liste zurückgeliefert wird.
 Beschreibung isSuchbaum(wurzel):
 

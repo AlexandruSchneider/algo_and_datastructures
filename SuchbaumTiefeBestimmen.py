@@ -16,6 +16,14 @@ def Tiefe(wurzel: Node) -> int:
     return rechtsTiefe + 1
 
 
+def Tiefe_Verbessert_Vom_Unterricht(wurzel: Node) -> int:
+    if wurzel is None:
+        return 0
+    linksTiefe = Tiefe(wurzel.links)
+    rechtsTiefe = Tiefe(wurzel.rechts)
+    return 1 + max(linksTiefe, rechtsTiefe)
+
+
 def main():
     wurzel = Node(20)
     wurzel.links = Node(10)
@@ -27,6 +35,7 @@ def main():
     wurzel.rechts.links.rechts.rechts = Node(60)
 
     print(f"Die Tiefe des Baumes ist: {Tiefe(wurzel)}")
+    print(f"Die Tiefe des Baumes ist: {Tiefe_Verbessert_Vom_Unterricht(wurzel)}")
 
 
 if __name__ == "__main__":

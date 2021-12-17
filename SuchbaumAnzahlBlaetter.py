@@ -17,6 +17,16 @@ def AnzahlBlaetter(wurzel: Node) -> int:
     return anzLinks + anzRechts
 
 
+def AnzahlBlaetter_Im_Unterricht(wurzel: Node) -> int:
+    if wurzel is None:
+        return 0
+    if wurzel.links is None and wurzel.rechts is None:
+        return 1
+    anzLinks = AnzahlBlaetter(wurzel.links)
+    anzRechts = AnzahlBlaetter(wurzel.rechts)
+    return anzLinks + anzRechts
+
+
 def main():
     wurzel = Node(20)
     wurzel.links = Node(10)
@@ -28,6 +38,7 @@ def main():
     wurzel.rechts.links.rechts.rechts = Node(60)
 
     print(f"Die Anzahl der Blätter des Baumes ist: {AnzahlBlaetter(wurzel)}")
+    print(f"Die Anzahl der Blätter des Baumes ist: {AnzahlBlaetter_Im_Unterricht(wurzel)}")
 
     wurzel = Node(20)
     print(f"Die Anzahl der Blätter des Baumes ist: {AnzahlBlaetter(wurzel)}")
